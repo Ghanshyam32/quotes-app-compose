@@ -68,4 +68,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     implementation("androidx.compose.material:material-icons-extended:1.5.4")
+    implementation("com.google.code.gson:gson:2.10.1")
 }
