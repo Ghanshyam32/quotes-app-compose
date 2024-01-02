@@ -27,11 +27,13 @@ import androidx.compose.ui.unit.dp
 import com.ghanshyam.quotesapp.models.Quote
 
 @Composable
-fun QuoteListItem(quote: Quote, onClick: () -> Unit) {
+fun QuoteListItem(quote: Quote, onClick: (quote: Quote) -> Unit) {
     Card(
         elevation = CardDefaults.cardElevation(
             defaultElevation = 10.dp
-        ), modifier = Modifier.padding(8.dp).clickable { onClick() }
+        ), modifier = Modifier
+            .padding(8.dp)
+            .clickable { onClick(quote) }
     ) {
         Row(Modifier.padding(16.dp)) {
             Image(
